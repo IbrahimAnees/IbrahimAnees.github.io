@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic - Phantom by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	
+		<style>
+			body {
+				animation: fadeInAnimation ease 1s;
+				animation-iteration-count: 1;
+				animation-fill-mode: forwards;
+			}
+			@keyframes fadeInAnimation {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+		</style>
+	
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+								<!-- Header -->
+								<header id="header">
+									<div class="inner" style="padding-bottom:30px">
+				
+										<!-- Logo -->
+											<a href="/" class="logo">
+												<span class="title"><h2>Home</h2></span>
+											</a>
+				
+				
+									</div>
+								</header>
+
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner2">
+										<!-- Section -->
+			<h1 style="font-size:80px;""><center>SM3 Job Solver</center></h1>
+			<center><p style="font-size:24px">Algorithmic solution to a job-scheduling problem.</p></center>
+			<center>
+			<p style="padding-top:30px"><b>Tech stack: </b><i>Java, Maven, JavaFX, GraphViz, Figma</i></p>
+			<p style="padding-bottom:20px"><b>Repo: </b><i><a href="https://github.com/ibrahimanees/sm3-solver/" target="_blank">https://github.com/ibrahimanees/sm3-solver/</a></i></p>
+			</center>
+
+			<center>
+				<figure>
+				<img style="padding-top:20px;" src="images/sm1.png" alt="Carbon footprint art" class="w3-round w3-image" width="600">
+				<figcaption style="font-size:18px">Starting screen: allows user to select a file containing an input graph.</figcaption>
+				</figure>
+			<div>
+				<h1 style="font-size:48px; padding-top:40px;">The problem</h2>
+				<p align="justify">The input is a directed acyclic task graph <i>G = (V, E, w, c)</i>, where <i>V</i> is the set of tasks and <i>E</i> is the
+					set of edges between the tasks. A weight <i>w</i> associated with task <i>n</i> represents its execution time
+				and weight <i>c</i> represents the communication time if two tasks are executed on different processors. If they are executed
+				on the same processor, the communication time is 0. <br><br> The objective of the problem is to minimize the schedule length
+			which is the finish time of the last task.</p>
+			<figure style="padding-top:60px; padding-bottom: 40px">
+				<img style="padding-top:20px;" src="images/sm2.png" alt="Carbon footprint art" class="w3-round w3-image" width="600">
+				<figcaption style="font-size:18px">Parameters screen: allows user choose number of processors, parallelisation, and number of cores.</figcaption>
+				</figure>
+			</div>
+			<h1 style="font-size:48px; padding-top:40px;">Algorithm</h2>
+			<p align="justify">During development, both the A* and branch and bound algorithms were implemented to find an optimal solution
+				to the problem. However for the final version, A* is used as it is proven to be faster. Pruning techniques were
+				used to speed up the algorithm.
+			</p>
+			<figure style="padding-top:60px; padding-bottom: 40px">
+				<img style="padding-top:20px;" src="images/graph.png" alt="Carbon footprint art" class="w3-round w3-image" width="600">
+				</figure>
+			<h1 style="font-size:48px; padding-top:40px;">Parallelisation</h2>
+			<p align="justify">In the A* algorithm, we go through each partial schedule within the priority queue of schedules. Due to this, we can split
+				tasks in the priority queue as evenly as possible for each thread so that they can run the rest of the algorithm on the remaining partial
+				schedules. This is how SM3 implements parallelisation with different cores.
+			</p>
+			<figure style="padding-top:60px; padding-bottom: 40px">
+				<img style="padding-top:20px;" src="images/graph2.png" alt="Carbon footprint art" class="w3-round w3-image" width="600">
+				</figure>
+			<h1 style="font-size:48px; padding-top:40px;">Visualisation</h2>
+			<p align="justify">The SM3 visualiser is designed in Figma, and developed using JavaFX. The node graph is shown using the GraphViz library.
+			</p>
+			<figure style="padding-top:60px; padding-bottom: 0px">
+				<img style="padding-top:20px;" src="images/sm3.png" alt="Carbon footprint art" class="w3-round w3-image" width="600">
+				<figcaption style="font-size:18px">Node graph tab: visually displays the input node graph.</figcaption>
+				</figure>
+				<figure style="padding-top:20px; padding-bottom: 40px">
+					<img style="padding-top:20px;" src="images/sm4.png" alt="Carbon footprint art" class="w3-round w3-image" width="600">
+					<figcaption style="font-size:18px">RAM/CPU tab: shows RAM/CPU usage while the algorithm runs.</figcaption>
+					</figure>
+			</center>
+		</div>
+
+						</div>
+					</div>
+
+				
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

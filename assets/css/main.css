@@ -3691,3 +3691,22 @@ span.imagea.icon {
 			}
 
 		}
+
+
+/* Wrapper */
+
+#wrapper > * > .inner2 {
+	width: 100%;
+	max-width: 68em;
+	margin: 0 auto;
+	padding: 0 10em;
+}
+
+	@media screen and (max-width: 736px) {
+
+		#wrapper > * > .inner2 {
+			padding: 0 1.25em;
+		}
+
+	}
+		
