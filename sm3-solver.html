@@ -64,7 +64,7 @@
 				<img style="padding-top:20px;" src="images/sm1.png" alt="Carbon footprint art" class="w3-round w3-image" width="600">
 				<figcaption style="font-size:18px">Starting screen: allows user to select a file containing an input graph.</figcaption>
 				</figure>
-			<div>
+			<div class="reveal">
 				<h1 style="font-size:48px; padding-top:40px;">The problem</h2>
 				<p align="justify">The input is a directed acyclic task graph <i>G = (V, E, w, c)</i>, where <i>V</i> is the set of tasks and <i>E</i> is the
 					set of edges between the tasks. A weight <i>w</i> associated with task <i>n</i> represents its execution time
@@ -76,6 +76,7 @@
 				<figcaption style="font-size:18px">Parameters screen: allows user choose number of processors, parallelisation, and number of cores.</figcaption>
 				</figure>
 			</div>
+			<div class=reveal>
 			<h1 style="font-size:48px; padding-top:40px;">Algorithm</h2>
 			<p align="justify">During development, both the A* and branch and bound algorithms were implemented to find an optimal solution
 				to the problem. However for the final version, A* is used as it is proven to be faster. Pruning techniques were
@@ -84,6 +85,8 @@
 			<figure style="padding-top:60px; padding-bottom: 40px">
 				<img style="padding-top:20px;" src="images/graph.png" alt="Carbon footprint art" class="w3-round w3-image" width="600">
 				</figure>
+			</div>
+			<div class=reveal>
 			<h1 style="font-size:48px; padding-top:40px;">Parallelisation</h2>
 			<p align="justify">In the A* algorithm, we go through each partial schedule within the priority queue of schedules. Due to this, we can split
 				tasks in the priority queue as evenly as possible for each thread so that they can run the rest of the algorithm on the remaining partial
@@ -92,6 +95,8 @@
 			<figure style="padding-top:60px; padding-bottom: 40px">
 				<img style="padding-top:20px;" src="images/graph2.png" alt="Carbon footprint art" class="w3-round w3-image" width="600">
 				</figure>
+			</div>
+			<div class=reveal>
 			<h1 style="font-size:48px; padding-top:40px;">Visualisation</h2>
 			<p align="justify">The SM3 visualiser is designed in Figma, and developed using JavaFX. The node graph is shown using the GraphViz library.
 			</p>
@@ -103,6 +108,7 @@
 					<img style="padding-top:20px;" src="images/sm4.png" alt="Carbon footprint art" class="w3-round w3-image" width="600">
 					<figcaption style="font-size:18px">RAM/CPU tab: shows RAM/CPU usage while the algorithm runs.</figcaption>
 					</figure>
+				</div>
 			</center>
 		</div>
 
